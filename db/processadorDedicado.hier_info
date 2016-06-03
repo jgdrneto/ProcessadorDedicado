@@ -1,0 +1,42 @@
+|processadorDedicado
+b1 => ~NO_FANOUT~
+b2 => ~NO_FANOUT~
+reset => ~NO_FANOUT~
+clk => ~NO_FANOUT~
+led_0 => ~NO_FANOUT~
+led_1 => ~NO_FANOUT~
+ledsLevel[0] => ~NO_FANOUT~
+ledsLevel[1] => ~NO_FANOUT~
+ledsLevel[2] => ~NO_FANOUT~
+ledsLevel[3] => ~NO_FANOUT~
+ledsLevel[4] => ~NO_FANOUT~
+displayMilhar[0] => ~NO_FANOUT~
+displayMilhar[1] => ~NO_FANOUT~
+displayMilhar[2] => ~NO_FANOUT~
+displayMilhar[3] => ~NO_FANOUT~
+displayMilhar[4] => ~NO_FANOUT~
+displayMilhar[5] => ~NO_FANOUT~
+displayMilhar[6] => ~NO_FANOUT~
+displayCentena[0] => ~NO_FANOUT~
+displayCentena[1] => ~NO_FANOUT~
+displayCentena[2] => ~NO_FANOUT~
+displayCentena[3] => ~NO_FANOUT~
+displayCentena[4] => ~NO_FANOUT~
+displayCentena[5] => ~NO_FANOUT~
+displayCentena[6] => ~NO_FANOUT~
+displaydezena[0] => ~NO_FANOUT~
+displaydezena[1] => ~NO_FANOUT~
+displaydezena[2] => ~NO_FANOUT~
+displaydezena[3] => ~NO_FANOUT~
+displaydezena[4] => ~NO_FANOUT~
+displaydezena[5] => ~NO_FANOUT~
+displaydezena[6] => ~NO_FANOUT~
+displayUnidade[0] => ~NO_FANOUT~
+displayUnidade[1] => ~NO_FANOUT~
+displayUnidade[2] => ~NO_FANOUT~
+displayUnidade[3] => ~NO_FANOUT~
+displayUnidade[4] => ~NO_FANOUT~
+displayUnidade[5] => ~NO_FANOUT~
+displayUnidade[6] => ~NO_FANOUT~
+
+

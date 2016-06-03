@@ -1,0 +1,29 @@
+--DESCRIÇÃO: Registrador dos leds para o processador dedicado
+
+--Autores: Debora Emili Costa Oliveira 
+--			  Igor Macedo Silva
+--			  Jose Gamleira do Rego Neto
+
+--Bibliotecas
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+	
+--Entidade do registrador dos leds do processador dedicado
+ENTITY registradorLeds IS
+	--Entradas e saidas do registrador dos leds
+	PORT(
+	--Entradas
+	clk				 : IN STD_LOGIC;						   --Clock usado no processador dedicado
+	loadRegLG	 	 : IN STD_LOGIC;							--Sinal de load para o resgistradores dos leds dos niveis
+	clearRegLG	 	 : IN STD_LOGIC;							--Sinal de clear para o resgistradores dos leds dos niveis
+	
+	--Saidas
+	ledsLevel		 : IN STD_LOGIC_VECTOR(4 DOWNTO 0)  --Leds que mostram o level do atual do jogo 
+	);
+END ENTITY;
+
+ARCHITECTURE resgitrarLeds OF registradorLeds IS
+
+	BEGIN
+
+END ARCHITECTURE;

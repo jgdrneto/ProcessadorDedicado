@@ -1,0 +1,27 @@
+--DESCRIÇÃO: Comparador(=) para o bloco operacional
+
+--Autores: Debora Emili Costa Oliveira 
+--			  Igor Macedo Silva
+--			  Jose Gamleira do Rego Neto
+
+--Bibliotecas
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+	
+--Entidade do comparador(=) para o bloco operacional
+ENTITY ComparadorIgual IS
+	--Entradas e saidas do comparador =
+	PORT(
+	--Entradas
+	clkDF			    : IN STD_LOGIC;						   --Clock obtido no divisor de frequencia
+	
+	--Saidas
+	clk				 : IN STD_LOGIC;						   --Clock usado no processador dedicado
+	);
+END ENTITY;
+
+ARCHITECTURE compararIgual OF ComparadorIgual IS
+
+	BEGIN
+
+END ARCHITECTURE;
