@@ -1,5 +1,8 @@
 --DESCRIÇÃO: Conversor de binario para dISplay de 7 segmentos
 
+--REFERENCIA:	https://en.wikipedia.org/wiki/Double_dabble
+--					http://www.deathbylogic.com/2013/12/binary-to-binary-coded-decimal-bcd-converter/
+
 --Autores: Debora Emili Costa Oliveira 
 --			  Igor Macedo Silva
 --			  Jose Gamleira do Rego Neto

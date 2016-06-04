@@ -51,6 +51,7 @@
 *.sopc_builder
 *example*
 *~
+*.temp
 *.sdc
 *.tcl
 *.pin
