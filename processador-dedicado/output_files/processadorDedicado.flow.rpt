@@ -1,5 +1,5 @@
 Flow report for processadorDedicado
-Sat Jun  4 13:09:07 2016
+Sat Jun  4 19:20:05 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Sat Jun  4 13:09:07 2016           ;
+; Flow Status                        ; Successful - Sat Jun  4 19:20:05 2016           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; processadorDedicado                             ;
-; Top-level Entity Name              ; registradorPN                                   ;
+; Top-level Entity Name              ; divisorDeFrequencia                             ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 12 / 33,216 ( < 1 % )                           ;
-;     Total combinational functions  ; 7 / 33,216 ( < 1 % )                            ;
-;     Dedicated logic registers      ; 12 / 33,216 ( < 1 % )                           ;
-; Total registers                    ; 12                                              ;
-; Total pins                         ; 13 / 475 ( 3 % )                                ;
+; Total logic elements               ; 51 / 33,216 ( < 1 % )                           ;
+;     Total combinational functions  ; 51 / 33,216 ( < 1 % )                           ;
+;     Dedicated logic registers      ; 33 / 33,216 ( < 1 % )                           ;
+; Total registers                    ; 33                                              ;
+; Total pins                         ; 2 / 475 ( < 1 % )                               ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 483,840 ( 0 % )                             ;
 ; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                                  ;
@@ -64,28 +64,28 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/04/2016 13:08:52 ;
+; Start date & time ; 06/04/2016 19:19:50 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; processadorDedicado ;
 +-------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                             ;
-+-------------------------------------+---------------------------------+---------------------+---------------+----------------+
-; Assignment Name                     ; Value                           ; Default Value       ; Entity Name   ; Section Id     ;
-+-------------------------------------+---------------------------------+---------------------+---------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 141812757352707.146505653208726 ; --                  ; --            ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                            ; --                  ; --            ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)          ; <None>              ; --            ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --                  ; --            ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --                  ; --            ; --             ;
-; PARTITION_COLOR                     ; 16764057                        ; --                  ; registradorPN ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --                  ; registradorPN ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --                  ; registradorPN ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --                  ; --            ; --             ;
-; TOP_LEVEL_ENTITY                    ; registradorPN                   ; processadorDedicado ; --            ; --             ;
-+-------------------------------------+---------------------------------+---------------------+---------------+----------------+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                   ;
++-------------------------------------+---------------------------------+---------------------+---------------------+----------------+
+; Assignment Name                     ; Value                           ; Default Value       ; Entity Name         ; Section Id     ;
++-------------------------------------+---------------------------------+---------------------+---------------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 141812757352707.146507879017993 ; --                  ; --                  ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                            ; --                  ; --                  ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)          ; <None>              ; --                  ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --                  ; --                  ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --                  ; --                  ; --             ;
+; PARTITION_COLOR                     ; 16764057                        ; --                  ; divisorDeFrequencia ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --                  ; divisorDeFrequencia ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --                  ; divisorDeFrequencia ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --                  ; --                  ; --             ;
+; TOP_LEVEL_ENTITY                    ; divisorDeFrequencia             ; processadorDedicado ; --                  ; --             ;
++-------------------------------------+---------------------------------+---------------------+---------------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -93,12 +93,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 634 MB              ; 00:00:01                           ;
-; Fitter                    ; 00:00:05     ; 1.0                     ; 741 MB              ; 00:00:05                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 580 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:00     ; 1.0                     ; 525 MB              ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 788 MB              ; 00:00:00                           ;
-; Total                     ; 00:00:09     ; --                      ; --                  ; 00:00:09                           ;
+; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 631 MB              ; 00:00:01                           ;
+; Fitter                    ; 00:00:05     ; 1.0                     ; 745 MB              ; 00:00:05                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 576 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 536 MB              ; 00:00:00                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 789 MB              ; 00:00:00                           ;
+; Total                     ; 00:00:09     ; --                      ; --                  ; 00:00:08                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

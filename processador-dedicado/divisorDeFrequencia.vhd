@@ -14,14 +14,32 @@ ENTITY divisorDeFrequencia IS
 	PORT(
 	--Entradas
 	clkAnt			 : IN STD_LOGIC;						   --Clock da placa FPGA
-	
 	--Saidas
-	clk				 : IN STD_LOGIC						   --Clock usado no processador dedicado
+	clk				 : OUT STD_LOGIC						   --Clock usado no processador dedicado
 	);
 END ENTITY;
 
 ARCHITECTURE dividir OF divisorDeFrequencia IS
+SIGNAL aux : STD_LOGIC := '0';
+-- frequenciaEntrada/(2*x) = FrequenciaSaida;
+-- x = frequenciaEntrada/(2*FrequenciaSaida) 
 
+CONSTANT inputFrequency : INTEGER := 50000000;
+CONSTANT outputFrequency : INTEGER := 1000;
+CONSTANT x : INTEGER := inputFrequency/(2*outputFrequency);
+
+BEGIN
+	PROCESS(clkAnt)
+	VARIABLE counter : INTEGER := 0;
 	BEGIN
-
+		IF (RISING_EDGE(clkAnt)) THEN
+			counter := counter + 1;
+			IF (counter = x) THEN
+				aux <= not(aux);
+				counter := 0;
+			END IF;
+		END IF;
+		
+		clk <= aux;
+	END PROCESS;
 END ARCHITECTURE;
