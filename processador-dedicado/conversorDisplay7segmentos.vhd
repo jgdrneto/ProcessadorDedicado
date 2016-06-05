@@ -33,7 +33,7 @@ ARCHITECTURE converter OF conversorDisplay7segmentos IS
 BEGIN
 	bIN_to_bcd : PROCESS (cont)
 		-- Variavel INterna para armazenar os bits
-		VARIABLE shift : unsigned(27 DOWNTO 0);
+		VARIABLE shift : UNSIGNED(27 DOWNTO 0);
 		
 	  -- ALIAS FOR parts of shIFt regISter
 		ALIAS num IS shift(11 DOWNTO 0);
@@ -66,7 +66,7 @@ BEGIN
 			END IF;
 			
 		 -- desloca todos para esquerda
-			shIFt := SHIFt_LEFT(shift, 1);
+			shIFt := SHIFT_LEFT(shift, 1);
 		END LOOP;
 		
 	  -- Manda numeros decimais para conversao

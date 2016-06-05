@@ -7,6 +7,7 @@
 --Bibliotecas
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
 	
 --Entidade do temporizador para o bloco operacional
 ENTITY temporizador IS
@@ -16,15 +17,28 @@ ENTITY temporizador IS
 	clk				 : IN STD_LOGIC;						    --Clock usado no processador dedicado
 	loadTemp	 	    : IN STD_LOGIC;							 --Sinal de load para o temporizador
 	clearTemp	 	 : IN STD_LOGIC;							 --Sinal de clear para o temporizador
-	cont				 : IN STD_LOGIC_VECTOR(11 DOWNTO 0); --Resultado obtido no contador
 	
 	--Saidas
-	RegCont   		 : IN STD_LOGIC_VECTOR(11 DOWNTO 0)  --Valor obtido no contador 
+	tc			  		 : OUT STD_LOGIC 							--Valor obtido no contador 
 	);
 END ENTITY;
 
 ARCHITECTURE temporizar OF temporizador IS
-
+BEGIN
+	PROCESS(clk,clearTemp,loadTemp)
+		VARIABLE temp_Temp : UNSIGNED(11 DOWNTO 0) := (OTHERS => '0');
 	BEGIN
-
+		IF (clearTemp = '1') THEN
+			temp_Temp := (others => '0');
+		ELSIF (RISING_EDGE(clk) AND loadTemp = '1') THEN
+			temp_Temp := temp_Temp + 1;
+		END IF;
+		
+		IF (temp_Temp = "001111101000") THEN
+			tc <= '1';
+		ELSE
+			tc <= '0';
+		END IF;
+		
+	END PROCESS;
 END ARCHITECTURE;

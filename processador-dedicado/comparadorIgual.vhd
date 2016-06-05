@@ -17,12 +17,18 @@ ENTITY comparadorIgual IS
 	cont				 : IN STD_LOGIC_VECTOR(11 DOWNTO 0); --Resultado obtido no contador
 	
 	--Saidas
-	c1				 	 : IN STD_LOGIC   					    --Resultado da comparacao =
+	c1				 	 : OUT STD_LOGIC   					    --Resultado da comparacao =
 	);
 END ENTITY;
 
 ARCHITECTURE compararIgual OF comparadorIgual IS
-
+BEGIN
+	PROCESS(RegPN,cont)
 	BEGIN
-
+		IF (RegPN = cont) THEN
+			c1 <= '1';
+		ELSE
+			c1 <= '0';
+		END IF;
+	END PROCESS;
 END ARCHITECTURE;

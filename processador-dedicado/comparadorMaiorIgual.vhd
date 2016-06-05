@@ -17,12 +17,18 @@ ENTITY comparadorMaiorIgual IS
 	cont				 : IN STD_LOGIC_VECTOR(11 DOWNTO 0);  --Resultado obtido no contador
 	
 	--Saidas
-	c2				 	 : IN STD_LOGIC   					     --Resultado da comparacao <=
+	c2				 	 : OUT STD_LOGIC   					     --Resultado da comparacao <=
 	);
 END ENTITY;
 
 ARCHITECTURE compararMaiorIgual OF comparadorMaiorIgual IS
-
+BEGIN
+	PROCESS(RegLim,cont)
 	BEGIN
-
+		IF (cont >= RegLim) THEN
+			c2 <= '1';
+		ELSE
+			c2 <= '0';
+		END IF;
+	END PROCESS;
 END ARCHITECTURE;

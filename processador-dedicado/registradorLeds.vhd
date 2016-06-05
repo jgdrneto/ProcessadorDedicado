@@ -18,12 +18,20 @@ ENTITY registradorLeds IS
 	clearRegLG	 	 : IN STD_LOGIC;							--Sinal de clear para o resgistradores dos leds dos niveis
 	
 	--Saidas
-	ledsLevel		 : IN STD_LOGIC_VECTOR(4 DOWNTO 0)  --Leds que mostram o level do atual do jogo 
+	ledsLevel		 : OUT STD_LOGIC_VECTOR(4 DOWNTO 0)  --Leds que mostram o level do atual do jogo 
 	);
 END ENTITY;
 
 ARCHITECTURE resgitrarLeds OF registradorLeds IS
-
+BEGIN
+	PROCESS(clk,loadRegLG,clearRegLG)
+	VARIABLE RegLG_temp : STD_LOGIC_VECTOR(4 DOWNTO 0) := (OTHERS => '0');
 	BEGIN
-
+		IF (clearRegLG = '1') THEN
+			RegLG_temp := (OTHERS => '0');
+		ELSIF (RISING_EDGE(clk) AND loadRegLG = '1') THEN
+			RegLG_temp := '1'&RegLG_temp(4 DOWNTO 1);
+		END IF;
+		ledsLevel <= RegLG_temp;
+	END PROCESS;
 END ARCHITECTURE;
