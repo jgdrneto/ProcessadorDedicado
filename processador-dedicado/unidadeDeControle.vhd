@@ -21,21 +21,23 @@ ENTITY unidadeDeControle IS
 	regLG_0			 : IN STD_LOGIC;   					   --Ultimo bit a esquerda do registrador dos niveis
 	reset				 : IN STD_LOGIC;						   --Botao de reset
 	clk				 : IN STD_LOGIC;						   --Clock usado no processador dedicado
+	clk50MHz			 : IN STD_LOGIC;							--Clock usado no Registrador PN
 	
 	--Saidas
-	led_0 			 : IN STD_LOGIC;   					   --Led que indica quando o botao b2 deve ser apertado
-	led_1				 : IN STD_LOGIC;   					   --Led que indica quando o usuario perdeu o jogo
-	loadCont		    : IN STD_LOGIC; 						   --Sinal de load para o contador
-	clearCont		 : IN STD_LOGIC; 						   --Sinal de clear para o contador
-	loadRegLim		 : IN STD_LOGIC; 						   --Sinal de load para o registrador de limite
-	clearRegLim		 : IN STD_LOGIC; 						   --Sinal de clear para o registrador de limite
-	ctrlMuxRegLim	 : IN STD_LOGIC;							--Sinal de controle para o MUX do registrador de limite
-	loadRegLG	 	 : IN STD_LOGIC;							--Sinal de load para o resgistradores dos leds dos niveis
-	clearRegLG	 	 : IN STD_LOGIC;							--Sinal de clear para o resgistradores dos leds dos niveis
-	loadTemp	 	    : IN STD_LOGIC;							--Sinal de load para o temporizador
-	clearTemp	 	 : IN STD_LOGIC;							--Sinal de clear para o temporizador
-	loadRegTemp	 	 : IN STD_LOGIC;							--Sinal de load para o registrador temporario
-	clearRegTemp	 : IN STD_LOGIC							--Sinal de clear para o registrador temporario
+	led_0 			 : OUT STD_LOGIC;   					   --Led que indica quando o botao b2 deve ser apertado
+	led_1				 : OUT STD_LOGIC;   					   --Led que indica quando o usuario perdeu o jogo
+	loadCont		    : OUT STD_LOGIC; 						--Sinal de load para o contador
+	clearCont		 : OUT STD_LOGIC; 						--Sinal de clear para o contador
+	loadRegLim		 : OUT STD_LOGIC; 						--Sinal de load para o registrador de limite
+	clearRegLim		 : OUT STD_LOGIC; 						--Sinal de clear para o registrador de limite
+	ctrlMuxRegLim	 : OUT STD_LOGIC;							--Sinal de controle para o MUX do registrador de limite
+	loadRegLG	 	 : OUT STD_LOGIC;							--Sinal de load para o resgistradores dos leds dos niveis
+	clearRegLG	 	 : OUT STD_LOGIC;							--Sinal de clear para o resgistradores dos leds dos niveis
+	loadTemp	 	    : OUT STD_LOGIC;							--Sinal de load para o temporizador
+	clearTemp	 	 : OUT STD_LOGIC;							--Sinal de clear para o temporizador
+	loadRegTemp	 	 : OUT STD_LOGIC;							--Sinal de load para o registrador temporario
+	clearRegTemp	 : OUT STD_LOGIC;							--Sinal de clear para o registrador temporario
+	clock50MHz		 : OUT STD_LOGIC							--Clock usado no Registrador PN
 	);		
 
 END ENTITY;

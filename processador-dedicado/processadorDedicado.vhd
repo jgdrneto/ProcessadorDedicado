@@ -13,19 +13,19 @@ ENTITY processadorDedicado IS
 	--Entradas e saidas do processador dedicado	
 	PORT(
 	--Entradas
-	b1 				 : IN STD_LOGIC;						   --Botao Inicalizador
-	b2 				 : IN STD_LOGIC;   					   --Botao para apertar quando acender o led
-	reset				 : IN STD_LOGIC;						   --Botao de reset
-	clk				 : IN STD_LOGIC;						   --Clock usado no processador dedicado
+	b1 				 : IN STD_LOGIC;						    --Botao Inicalizador
+	b2 				 : IN STD_LOGIC;   					    --Botao para apertar quando acender o led
+	reset				 : IN STD_LOGIC;						    --Botao de reset
+	clk				 : IN STD_LOGIC;						    --Clock usado no processador dedicado
 	
 	--Saidas
-	led_0 			 : IN STD_LOGIC;   					   --Led que indica quando o botao b2 deve ser apertado
-	led_1				 : IN STD_LOGIC;   					   --Led que indica quando o usuario perdeu o jogo
-	ledsLevel		 : IN STD_LOGIC_VECTOR(4 DOWNTO 0); --Leds que mostram o level do atual do jogo 
-	displayMilhar   : IN STD_LOGIC_VECTOR(6 DOWNTO 0); --Display de 7 segmentos que mostram a(s) unidade(s) de milhar(es) do tempo descorrido
-	displayCentena  : IN STD_LOGIC_VECTOR(6 DOWNTO 0); --Display de 7 segmentos que mostram a(s) dezena(s) do tempo descorrido
-	displaydezena   : IN STD_LOGIC_VECTOR(6 DOWNTO 0); --Display de 7 segmentos que mostram a(s) centenas(s) do tempo descorrido
-	displayUnidade  : IN STD_LOGIC_VECTOR(6 DOWNTO 0)  --Display de 7 segmentos que mostram a(s) unidades(s) do tempo descorrido
+	led_0 			 : OUT STD_LOGIC;   					    --Led que indica quando o botao b2 deve ser apertado
+	led_1				 : OUT STD_LOGIC;   					    --Led que indica quando o usuario perdeu o jogo
+	ledsLevel		 : OUT STD_LOGIC_VECTOR(4 DOWNTO 0); --Leds que mostram o level do atual do jogo 
+	displayMilhar   : OUT STD_LOGIC_VECTOR(6 DOWNTO 0); --Display de 7 segmentos que mostram a(s) unidade(s) de milhar(es) do tempo descorrido
+	displayCentena  : OUT STD_LOGIC_VECTOR(6 DOWNTO 0); --Display de 7 segmentos que mostram a(s) dezena(s) do tempo descorrido
+	displaydezena   : OUT STD_LOGIC_VECTOR(6 DOWNTO 0); --Display de 7 segmentos que mostram a(s) centenas(s) do tempo descorrido
+	displayUnidade  : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)  --Display de 7 segmentos que mostram a(s) unidades(s) do tempo descorrido
 	);		
 
 END ENTITY;

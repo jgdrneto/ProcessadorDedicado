@@ -15,7 +15,8 @@ ENTITY divisorDeFrequencia IS
 	--Entradas
 	clkAnt			 : IN STD_LOGIC;						   --Clock da placa FPGA
 	--Saidas
-	clk				 : OUT STD_LOGIC						   --Clock usado no processador dedicado
+	clk				 : OUT STD_LOGIC;						   --Clock usado no processador dedicado
+	clk50MHz			 : OUT STD_LOGIC							--Clock usado no Registrador PN
 	);
 END ENTITY;
 
@@ -41,5 +42,6 @@ BEGIN
 		END IF;
 		
 		clk <= aux;
+		clk50MHz <=clkAnt;
 	END PROCESS;
 END ARCHITECTURE;

@@ -16,7 +16,7 @@ ENTITY registradorPN IS
 	--Entradas e saidas do registrador PN
 	PORT(
 	--Entradas
-	clk				 : IN STD_LOGIC;						    --Clock usado no processador dedicado
+	clk				 : IN STD_LOGIC;						     --Clock usado no processador dedicado
 	--Saidas
 	RegPN			    : OUT STD_LOGIC_VECTOR(11 DOWNTO 0)  --Valor aleatorio do registrador PN
 	);

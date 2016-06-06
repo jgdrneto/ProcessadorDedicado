@@ -32,10 +32,10 @@ ARCHITECTURE converter OF conversorDisplay7segmentos IS
 	
 BEGIN
 	bIN_to_bcd : PROCESS (cont)
-		-- Variavel INterna para armazenar os bits
+		--Variavel Interna para armazenar os bits
 		VARIABLE shift : UNSIGNED(27 DOWNTO 0);
 		
-	  -- ALIAS FOR parts of shIFt regISter
+		--ALIAS FOR parts of shIFt regISter
 		ALIAS num IS shift(11 DOWNTO 0);
 		ALIAS one IS shift(15 DOWNTO 12);
 		ALIAS ten IS shift(19 DOWNTO 16);
@@ -43,14 +43,14 @@ BEGIN
 		ALIAS tho IS shift(27 DOWNTO 24);
 	
 	BEGIN
-		-- Limpa variaveIS e armazena novo numero
+		-- Limpa variaveis e armazena novo numero
 		num := UNSIGNED(cont);
 		one := X"0";
 		ten := X"0";
 		hun := X"0";
 		tho := X"0";
 		
-	  -- Um LOOP de 12 vezes
+		--Um LOOP de 12 vezes
 		FOR i IN 1 to num'LENGTH LOOP
 		  -- Confere se alguma variavel eh maior ou igual a 5
 			IF one >= 5 THEN
@@ -65,11 +65,11 @@ BEGIN
 				hun := hun + 3;
 			END IF;
 			
-		 -- desloca todos para esquerda
+		--Desloca todos para esquerda
 			shIFt := SHIFT_LEFT(shift, 1);
 		END LOOP;
 		
-	  -- Manda numeros decimais para conversao
+		--Manda numeros decimais para conversao
 		hundreds		 <= STD_LOGIC_VECTOR(hun);
 		tens    		 <= STD_LOGIC_VECTOR(ten);
 		ones     	 <= STD_LOGIC_VECTOR(one);
@@ -90,7 +90,7 @@ BEGIN
 								"1111111" when others;
 		
 	WITH tens SELECT
-		displayDezena <= 	"0000001" when b"0000",
+		displayDezena <= 	"0000001" when "0000",
 								"1001111" when "0001",
 								"0010010" when "0010",
 								"0000110" when "0011",
@@ -103,7 +103,7 @@ BEGIN
 								"1111111" when others;
 		
 	WITH hundreds SELECT
-		displayCentena <= "0000001" when b"0000",
+		displayCentena <= "0000001" when "0000",
 								"1001111" when "0001",
 								"0010010" when "0010",
 								"0000110" when "0011",
@@ -116,7 +116,7 @@ BEGIN
 								"1111111" when others;
 		
 	WITH thousands SELECT
-		displayMilhar <= 	"0000001" when b"0000",
+		displayMilhar <= 	"0000001" when "0000",
 								"1001111" when "0001",
 								"0010010" when "0010",
 								"0000110" when "0011",
