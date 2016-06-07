@@ -1,6 +1,6 @@
 Flow report for processadorDedicado
-Mon Jun  6 12:38:26 2016
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Tue Jun 07 18:31:19 2016
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -40,10 +40,10 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Mon Jun  6 12:38:26 2016           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Flow Status                        ; Successful - Tue Jun 07 18:31:19 2016           ;
+; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; processadorDedicado                             ;
-; Top-level Entity Name              ; processadorDedicado                             ;
+; Top-level Entity Name              ; blocoOperacional                                ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
@@ -51,7 +51,7 @@ applicable agreement for further details.
 ;     Total combinational functions  ; 0                                               ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 39                                              ;
+; Total pins                         ; 74                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -64,27 +64,28 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/06/2016 12:38:24 ;
+; Start date & time ; 06/07/2016 18:31:18 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; processadorDedicado ;
 +-------------------+---------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                    ;
-+-------------------------------------+--------------------------------+---------------+-------------+----------------+
-; Assignment Name                     ; Value                          ; Default Value ; Entity Name ; Section Id     ;
-+-------------------------------------+--------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 70465357836160.146522750403246 ; --            ; --          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                           ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)         ; <None>        ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                             ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                              ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                       ; --            ; --          ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING          ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                         ; --            ; --          ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                   ; --            ; --          ; --             ;
-+-------------------------------------+--------------------------------+---------------+-------------+----------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                               ;
++-------------------------------------+--------------------------------+---------------------+------------------+----------------+
+; Assignment Name                     ; Value                          ; Default Value       ; Entity Name      ; Section Id     ;
++-------------------------------------+--------------------------------+---------------------+------------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 57606936882192.146533507807392 ; --                  ; --               ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                           ; --                  ; --               ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)         ; <None>              ; --               ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                             ; --                  ; --               ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                              ; --                  ; --               ; --             ;
+; PARTITION_COLOR                     ; 16764057                       ; --                  ; blocoOperacional ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING          ; --                  ; blocoOperacional ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                         ; --                  ; blocoOperacional ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                   ; --                  ; --               ; --             ;
+; TOP_LEVEL_ENTITY                    ; blocoOperacional               ; processadorDedicado ; --               ; --             ;
++-------------------------------------+--------------------------------+---------------------+------------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -92,18 +93,18 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:01     ; 1.0                     ; 613 MB              ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:01     ; 1.0                     ; 375 MB              ; 00:00:01                           ;
 ; Total                ; 00:00:01     ; --                      ; --                  ; 00:00:01                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+--------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                      ;
-+----------------------+------------------+--------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name      ; OS Version ; Processor type ;
-+----------------------+------------------+--------------+------------+----------------+
-; Analysis & Synthesis ; Gameleira-PC     ; Ubuntu 16.04 ; 16         ; x86_64         ;
-+----------------------+------------------+--------------+------------+----------------+
++-----------------------------------------------------------------------------------+
+; Flow OS Summary                                                                   ;
++----------------------+------------------+-----------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++----------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis ; 4E3-51-HP        ; Windows 7 ; 6.1        ; x86_64         ;
++----------------------+------------------+-----------+------------+----------------+
 
 
 ------------
