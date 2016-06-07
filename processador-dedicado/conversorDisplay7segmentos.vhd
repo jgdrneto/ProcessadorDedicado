@@ -1,4 +1,5 @@
 --DESCRIÇÃO: Conversor de binario para dISplay de 7 segmentos
+-- TESTADO ok!
 
 --REFERENCIA:	https://en.wikipedia.org/wiki/Double_dabble
 --					http://www.deathbylogic.com/2013/12/binary-to-binary-coded-decimal-bcd-converter/
@@ -31,7 +32,7 @@ ARCHITECTURE converter OF conversorDisplay7segmentos IS
 	SIGNAL hundreds, tens, ones, thousands : STD_LOGIC_VECTOR(3 DOWNTO 0);
 	
 BEGIN
-	bIN_to_bcd : PROCESS (cont)
+	bin_to_bcd : PROCESS (cont)
 		--Variavel Interna para armazenar os bits
 		VARIABLE shift : UNSIGNED(27 DOWNTO 0);
 		
@@ -77,55 +78,55 @@ BEGIN
 	END PROCESS;
 	
 	WITH ones SELECT 
-		displayUnidade <=	"0000001" when "0000",
-								"1001111" when "0001",
-								"0010010" when "0010",
-								"0000110" when "0011",
-								"1001100" when "0100",
-								"0100100" when "0101",
-								"0100000" when "0110",
-								"0001111" when "0111",
+		displayUnidade <=	"1000000" when "0000",
+								"1111001" when "0001",
+								"0100100" when "0010",
+								"0110000" when "0011",
+								"0011001" when "0100",
+								"0010010" when "0101",
+								"0000010" when "0110",
+								"1111000" when "0111",
 								"0000000" when "1000",
-								"0000100" when "1001",
+								"0010000" when "1001",
 								"1111111" when others;
 		
 	WITH tens SELECT
-		displayDezena <= 	"0000001" when "0000",
-								"1001111" when "0001",
-								"0010010" when "0010",
-								"0000110" when "0011",
-								"1001100" when "0100",
-								"0100100" when "0101",
-								"0100000" when "0110",
-								"0001111" when "0111",
+		displayDezena <= 	"1000000" when "0000",
+								"1111001" when "0001",
+								"0100100" when "0010",
+								"0110000" when "0011",
+								"0011001" when "0100",
+								"0010010" when "0101",
+								"0000010" when "0110",
+								"1111000" when "0111",
 								"0000000" when "1000",
-								"0000100" when "1001",
+								"0010000" when "1001",
 								"1111111" when others;
 		
 	WITH hundreds SELECT
-		displayCentena <= "0000001" when "0000",
-								"1001111" when "0001",
-								"0010010" when "0010",
-								"0000110" when "0011",
-								"1001100" when "0100",
-								"0100100" when "0101",
-								"0100000" when "0110",
-								"0001111" when "0111",
+		displayCentena <= "1000000" when "0000",
+								"1111001" when "0001",
+								"0100100" when "0010",
+								"0110000" when "0011",
+								"0011001" when "0100",
+								"0010010" when "0101",
+								"0000010" when "0110",
+								"1111000" when "0111",
 								"0000000" when "1000",
-								"0000100" when "1001",
+								"0010000" when "1001",
 								"1111111" when others;
 		
 	WITH thousands SELECT
-		displayMilhar <= 	"0000001" when "0000",
-								"1001111" when "0001",
-								"0010010" when "0010",
-								"0000110" when "0011",
-								"1001100" when "0100",
-								"0100100" when "0101",
-								"0100000" when "0110",
-								"0001111" when "0111",
+		displayMilhar <= 	"1000000" when "0000",
+								"1111001" when "0001",
+								"0100100" when "0010",
+								"0110000" when "0011",
+								"0011001" when "0100",
+								"0010010" when "0101",
+								"0000010" when "0110",
+								"1111000" when "0111",
 								"0000000" when "1000",
-								"0000100" when "1001",
+								"0010000" when "1001",
 								"1111111" when others;
 
 END ARCHITECTURE;

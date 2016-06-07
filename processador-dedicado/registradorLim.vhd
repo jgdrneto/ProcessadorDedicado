@@ -1,4 +1,5 @@
 --DESCRIÇÃO: Registrador do tempo limite para apertar o botao depois do led acesso
+--TESTADO ok!
 
 --Autores: Debora Emili Costa Oliveira 
 --			  Igor Macedo Silva

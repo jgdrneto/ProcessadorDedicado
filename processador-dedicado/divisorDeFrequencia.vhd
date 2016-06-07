@@ -1,4 +1,5 @@
 --DESCRIÇÃO: Divisor de frequencia para o clock do processador dedicado
+-- TESTADO ok!
 
 --Autores: Debora Emili Costa Oliveira 
 --			  Igor Macedo Silva
@@ -40,7 +41,6 @@ BEGIN
 				counter := 0;
 			END IF;
 		END IF;
-		
 		clk <= aux;
 		clk50MHz <=clkAnt;
 	END PROCESS;

@@ -1,4 +1,5 @@
 --DESCRIÇÃO: Registrador dos leds para o processador dedicado
+-- TESTADO ok!
 
 --Autores: Debora Emili Costa Oliveira 
 --			  Igor Macedo Silva

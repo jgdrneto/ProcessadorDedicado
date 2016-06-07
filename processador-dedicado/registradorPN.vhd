@@ -1,4 +1,5 @@
 --DESCRIÇÃO: Registrador de numeros aleatorios para o processador dedicado
+-- TESTADO ok!
 
 --REFERENCIAS: http://vhdlguru.blogspot.com.br/2010/03/random-number-generator-in-vhdl.html
 --					https://en.wikipedia.org/wiki/Linear-feedback_shift_register

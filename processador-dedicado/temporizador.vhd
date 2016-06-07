@@ -1,4 +1,5 @@
 --DESCRIÇÃO: Temporizador para o bloco operacional
+-- TESTADO ok!
 
 --Autores: Debora Emili Costa Oliveira 
 --			  Igor Macedo Silva
